@@ -3,32 +3,26 @@ package main
 import "fmt"
 
 func main() {
-	//Declaracion de constantes
-	const pi float64 = 3.14
-	const pi2 = 3.1415
+	helloMessage := "Hello"
+	worldMessage := "world"
 
-	fmt.Println("pi", pi)
-	fmt.Println("pi2", pi2)
+	// Println: Salto de Linea Automatico
+	fmt.Println(helloMessage, worldMessage)
+	fmt.Println(helloMessage, worldMessage)
 
-	// Declaracion de variables enteras
+	// Printf
+	nombre := "Platzi"
+	cursos := 500
+	// Con valores seguros
+	fmt.Printf("%s tiene más de %d cursos\n", nombre, cursos)
+	// Con valores inseguros
+	fmt.Printf("%v tiene más de %v cursos\n", nombre, cursos)
 
-	base := 2           //No ha sido declarada anteriormente creada e iniciada sin tipo de dato
-	var altura int = 14 // declaramos la variable y asignamos un valor con el tipo de variable
-	var area int        // solo la declaramos
+	// Sprintf
+	message := fmt.Sprintf("%v tiene más de %v cursos\n", nombre, cursos)
+	fmt.Println(message)
 
-	fmt.Println(base, altura, area)
-
-	// Zero values
-	var a int     // 0
-	var b float64 // 0
-	var c string  // ''
-	var d bool    // false
-	fmt.Println(a, b, c, d)
-
-	// Area de un cuadrado
-	const baseCuadrado = 10
-	areaCuadrado := baseCuadrado * baseCuadrado
-
-	fmt.Println("Area cuadrado: ", areaCuadrado)
-
+	// Tipo de datos:
+	fmt.Printf("helloMessage: %T\n", helloMessage)
+	fmt.Printf("cursos: %T\n", cursos)
 }
