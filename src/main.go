@@ -3,32 +3,34 @@ package main
 import "fmt"
 
 func main() {
-	//Declaracion de constantes
-	const pi float64 = 3.14
-	const pi2 = 3.1415
+	x := 10
+	y := 50
 
-	fmt.Println("pi", pi)
-	fmt.Println("pi2", pi2)
+	// Suma
+	result := x + y
+	fmt.Println("Suma: ", result)
 
-	// Declaracion de variables enteras
+	// Resta
+	result = y - x
+	fmt.Println("Resta: ", result)
 
-	base := 2           //No ha sido declarada anteriormente creada e iniciada sin tipo de dato
-	var altura int = 14 // declaramos la variable y asignamos un valor con el tipo de variable
-	var area int        // solo la declaramos
+	// Multiplicación
+	result = x * y
+	fmt.Println("Multiplicacion: ", result)
 
-	fmt.Println(base, altura, area)
+	// Division
+	result = y / x
+	fmt.Println("Division: ", result)
 
-	// Zero values
-	var a int     // 0
-	var b float64 // 0
-	var c string  // ''
-	var d bool    // false
-	fmt.Println(a, b, c, d)
+	// Modulo
+	result = y % x
+	fmt.Println("Modulo: ", result)
 
-	// Area de un cuadrado
-	const baseCuadrado = 10
-	areaCuadrado := baseCuadrado * baseCuadrado
+	// Aumenta
+	x++
+	fmt.Println("Aumenta: ", x)
 
-	fmt.Println("Area cuadrado: ", areaCuadrado)
-
+	// Disminiye
+	x--
+	fmt.Println("Disminuye: ", x)
 }
