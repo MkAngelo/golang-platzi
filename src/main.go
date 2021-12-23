@@ -12,17 +12,17 @@ func main() {
 
 	// Declaracion de variables enteras
 
-	base := 2           //creada e iniciada sin tipo de dato
-	var altura int = 14 //creada e iniciada con valor
-	var area int        // creada
+	base := 2           //No ha sido declarada anteriormente creada e iniciada sin tipo de dato
+	var altura int = 14 // declaramos la variable y asignamos un valor con el tipo de variable
+	var area int        // solo la declaramos
 
 	fmt.Println(base, altura, area)
 
 	// Zero values
-	var a int
-	var b float64
-	var c string
-	var d bool
+	var a int     // 0
+	var b float64 // 0
+	var c string  // ''
+	var d bool    // false
 	fmt.Println(a, b, c, d)
 
 	// Area de un cuadrado
