@@ -2,27 +2,31 @@ package main
 
 import "fmt"
 
-func main() {
-	helloMessage := "Hello"
-	worldMessage := "world"
-
-	// Println: Salto de Linea Automatico
-	fmt.Println(helloMessage, worldMessage)
-	fmt.Println(helloMessage, worldMessage)
-
-	// Printf
-	nombre := "Platzi"
-	cursos := 500
-	// Con valores seguros
-	fmt.Printf("%s tiene más de %d cursos\n", nombre, cursos)
-	// Con valores inseguros
-	fmt.Printf("%v tiene más de %v cursos\n", nombre, cursos)
-
-	// Sprintf
-	message := fmt.Sprintf("%v tiene más de %v cursos\n", nombre, cursos)
+func normalFunction(message string) {
 	fmt.Println(message)
+}
 
-	// Tipo de datos:
-	fmt.Printf("helloMessage: %T\n", helloMessage)
-	fmt.Printf("cursos: %T\n", cursos)
+func tripleArgument(a, b int, c string) {
+	fmt.Println(a, b, c)
+}
+
+func returnValue(a int) int { // Valor de salida
+	return a * 2
+}
+
+func doubleReturn(a int) (c, d int) {
+	return a, a * 2
+}
+
+func main() {
+	normalFunction("Hola Mundo")
+	tripleArgument(1, 2, "H0l4!")
+
+	value := returnValue(10)
+	fmt.Println("Value: ", value)
+
+	value1, value2 := doubleReturn(5)
+	fmt.Printf("Value1: %d, Value2: %d\n", value1, value2)
+
+	//PAra evitar usar una variable de retorno con '_'
 }
