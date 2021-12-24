@@ -3,20 +3,35 @@ package main
 import "fmt"
 
 func main() {
-	// Defer
-	defer fmt.Println("Hola")
-	fmt.Println("Mundo")
+	// Array (Inmutable)
+	var array [4]int
+	fmt.Println(array)
 
-	// Continue and break
-	for i := 0; i < 10; i++ {
-		fmt.Println(i)
-		if i == 4 {
-			fmt.Println("Es la mitad")
-			continue
-		}
-
-		if i == 7 {
-			break
-		}
+	for i := 0; i < 4; i++ {
+		array[i] = i + 1
 	}
+
+	fmt.Println(array)
+
+	// len -> elementos
+	// cap -> capacidad maxima
+
+	// Slices (Mutables)
+	slice := []int{0, 1, 2, 3, 4, 5, 6}
+	fmt.Println(slice)
+
+	// Metodos en el slice
+	fmt.Println(slice[0]) // no es incluyente
+	fmt.Println(slice[:3])
+	fmt.Println(slice[2:4])
+	fmt.Println(slice[4:])
+
+	// Append
+	slice = append(slice, 7)
+	fmt.Println(slice)
+
+	// Append nueva lista
+	newSlice := []int{8, 9, 10}
+	slice = append(slice, newSlice...)
+	fmt.Println(slice)
 }
