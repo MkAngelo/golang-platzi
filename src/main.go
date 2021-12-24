@@ -3,25 +3,26 @@ package main
 import "fmt"
 
 func main() {
-	//For condicional
-	for i := 0; i < 10; i++ {
-		fmt.Println(i)
+	valor1 := 2
+	valor2 := 2
+
+	if valor1 == 1 {
+		fmt.Println("El valor es 1")
+	} else {
+		fmt.Println("El valor NO es 1")
 	}
 
-	fmt.Println("-----")
-
-	//For while
-	counter := 0
-	for counter < 10 {
-		fmt.Println(counter)
-		counter++
+	// With and
+	if valor1 == 1 && valor2 == 2 {
+		fmt.Println("Es Verdad")
+	} else {
+		fmt.Println("Es Mentira")
 	}
 
-	fmt.Println("-----")
-
-	//For forever
-	counterForever := 0
-	for {
-		fmt.Println(counterForever)
+	// With and
+	if valor1 == 1 || valor2 == 2 {
+		fmt.Println("Es Verdad")
+	} else {
+		fmt.Println("Es Mentira")
 	}
 }
