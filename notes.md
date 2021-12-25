@@ -1,3 +1,18 @@
+# GO/LANG
+
+Go lang es un lenguaje de programación creado con la eficiencia de **C** y la syntaxis de **Python**
+
+La forma en que se organiza un proyecto en **GO** es la siguiente:
+ * bin
+ * pkg
+ * src
+
+ La forma de ejecutar un archivo .go es con *build* de esta forma:
+ * go build archivo.go
+
+ Ó de la siguente forma (más rapida), usando *run*:
+ * go run archivo.go
+
 > Numeros enteros
   
 * int = Depende del OS (32 o 64 bits)
@@ -26,3 +41,4 @@
 * Complex64 = Real e Imaginario float32
 * Complex128 = Real e Imaginario float64
 * Ejemplo : c:=10 + 8i
+
