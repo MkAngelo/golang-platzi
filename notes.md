@@ -1,17 +1,27 @@
-# GO/LANG
+# GO/GOLANG
 
-Go lang es un lenguaje de programación creado con la eficiencia de **C** y la syntaxis de **Python**
+Golang es un lenguaje de programación creado con la eficiencia de **C** y la syntaxis de **Python**
+
+Es un lenguaje estrictamente tipado creado en Google por Robert, Rob Pike y Ken Thompson. Anunciado en Noviembre de 2009 y su primera version fue en 2012. Gophers
 
 La forma en que se organiza un proyecto en **GO** es la siguiente:
- * bin
- * pkg
- * src
+ * bin: guardar los ejecutables
+ * pkg: guarda ciertos codigos de go modules
+ * src: Aquí se escribe el codigo/ Se guarda el conjunto de codigo de librerias de terceros.
+
+> Que es package?
+ 
+    Un package es el nombre de la corpeta donde esta guardado
 
  La forma de ejecutar un archivo .go es con *build* de esta forma:
  * go build archivo.go
 
  Ó de la siguente forma (más rapida), usando *run*:
  * go run archivo.go
+
+En Go se usan los slices (mutables), arrays (no mutables), los maps(diccionarios).
+
+### TIPOS DE DATOS
 
 > Numeros enteros
   
@@ -42,3 +52,5 @@ La forma en que se organiza un proyecto en **GO** es la siguiente:
 * Complex128 = Real e Imaginario float64
 * Ejemplo : c:=10 + 8i
 
+### STRUCTS
+Es la forma de hacer clases en Go.
