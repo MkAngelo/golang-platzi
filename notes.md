@@ -66,3 +66,6 @@ Al momento de crear paquetes el GO, se presentan algunos errores con respecto a 
 * Posteriormente en nuestro `main.go` importamos nuestro modulo desde la carpeta raiz
 
     `import "platzi/src/modulo"`
+
+### MANEJADOR DE PAQUETES EN GO
+Go cuenta con su propio manejado de paquetes llamado "go get", el cual se usa de la siguente manera:  `go get`
