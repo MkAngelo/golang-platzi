@@ -1,21 +1,16 @@
 package main
 
-import "fmt"
-
-type car struct {
-	brand string
-	year  int
-}
+import (
+	"curso_golang_platzi/src/mypackage"
+	"fmt"
+	// pk "ruta" es la forma de poner alias
+)
 
 func main() {
-	myCar := car{brand: "Ford", year: 2020}
+	var myCar mypackage.CarPublic
+	myCar.Brand = "Ferrari"
+	myCar.Year = 2001
+	// Solo se  pude acceder a los paquetes publicos
+
 	fmt.Println(myCar)
-
-	// Otra manera
-
-	var otherCar car
-	otherCar.brand = "Ferrari"
-
-	fmt.Println(otherCar)
-
 }
