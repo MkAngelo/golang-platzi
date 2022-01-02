@@ -2,44 +2,39 @@ package main
 
 import "fmt"
 
-type pc struct {
-	ram   int
-	disk  int
-	brand string
+type figuras2D interface {
+	area() float64
 }
 
-func (myPC pc) ping() {
-	fmt.Println(myPC.brand, "Pong.")
+type cuadrado struct {
+	base float64
 }
 
-func (myPc *pc) duplicateRAM() {
-	myPc.ram = myPc.ram * 2
+type rectangulo struct {
+	base   float64
+	altura float64
 }
 
-func (myPC pc) show() {
-	showString := fmt.Sprintf("Esta PC es de la marca %s, tiene %d GB de RAM y %d GB de disco.", myPC.brand, myPC.ram, myPC.disk)
-	fmt.Println(showString)
+func (c cuadrado) area() float64 {
+	return c.base * c.base
+}
+
+func (r rectangulo) area() float64 {
+	return r.base * r.altura
+}
+
+func calcular(f figuras2D) {
+	fmt.Println("Area:", f.area())
 }
 
 func main() {
-	a := 50
-	b := &a // Puntero a memoria
+	myCuadrado := cuadrado{base: 2}
+	myRectangulo := rectangulo{base: 2, altura: 4}
 
-	fmt.Println(a)
-	fmt.Println(*b) // Accedemos al valor en memoria
-	fmt.Println(b)  // Accedemos al puntero
+	calcular(myCuadrado)
+	calcular(myRectangulo)
 
-	*b = 100
-	fmt.Println(a)
-
-	myPC := pc{ram: 16, disk: 200, brand: "HP"}
-
-	myPC.show()
-	myPC.ping()
-
-	fmt.Println(myPC)
-	myPC.duplicateRAM()
-	fmt.Println(myPC)
-	myPC.duplicateRAM()
-	fmt.Println(myPC)
+	// Lista de interfaces
+	myInterface := []interface{}{"Hola", 12, 3.1416}
+	fmt.Println(myInterface...)
 }
