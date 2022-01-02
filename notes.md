@@ -60,7 +60,7 @@ Al momento de crear paquetes el GO, se presentan algunos errores con respecto a 
 
 * Estar en la carpeta raiz del proyecto y ejecutar
     
-    `go mod <nombreCarpetaRaiz>`
+    `go mod init <nombreCarpetaRaiz>`
 
 * Obtenemos un archivo con el nombre go.mod
 * Posteriormente en nuestro `main.go` importamos nuestro modulo desde la carpeta raiz
