@@ -54,3 +54,15 @@ En Go se usan los slices (mutables), arrays (no mutables), los maps(diccionarios
 
 ### STRUCTS
 Es la forma de hacer clases en Go.
+
+### CREAR PAQUETES EN GOLANG
+Al momento de crear paquetes el GO, se presentan algunos errores con respecto a la creacion de estos en carpetas separadas, es por ello que la solucion es usar lo siguiente:
+
+* Estar en la carpeta raiz del proyecto y ejecutar
+    
+    `go mod <nombreCarpetaRaiz>`
+
+* Obtenemos un archivo con el nombre go.mod
+* Posteriormente en nuestro `main.go` importamos nuestro modulo desde la carpeta raiz
+
+    `import "platzi/src/modulo"`
